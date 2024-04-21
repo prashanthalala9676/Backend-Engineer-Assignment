@@ -30,7 +30,7 @@ export default class PortfolioController {
 
   static async update(request, response) {
     try {
-      const { id } = request.body; // Extract ID from request body
+      const { id } = request.body; 
       if (!id) {
         return response
           .status(httpStatus.BAD_REQUEST)
@@ -57,7 +57,7 @@ export default class PortfolioController {
 
   static async remove(request, response) {
     try {
-      const { id } = request.body; // Extract ID from request body
+      const { id } = request.body; 
       if (!id) {
         return response
           .status(httpStatus.BAD_REQUEST)
@@ -79,7 +79,7 @@ export default class PortfolioController {
       console.error("Error:", error);
       return response
         .status(httpStatus.INTERNAL_SERVER_ERROR)
-        .json({ status: false, error: error.message }); // Include error message
+        .json({ status: false, error: error.message }); 
     }
   }
 }
